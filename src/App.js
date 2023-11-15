@@ -80,7 +80,7 @@ function MainPage() {
     <StateContext.Provider value={state}>
       <DispatchContext.Provider value={dispatch}>
         <BrowserRouter>
-          <Header element={state.loggedIn} />
+          <Header />
           <FlashMessages messages={state.flashMessages} />
           <ErrorMessages messages={state.errorMessages} />
           <Routes>

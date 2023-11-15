@@ -1,5 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
 * {
   font-family: "Times New Roman", Times, serif;
+  /* background-color: #f1f2f6; */
+}
+
+body {
+  background-color: #f1f2f6;
+}
+
+.headerTitle {
+  justify-content: center;
+  margin-left: 2rem;
+  margin-right: auto;
+  color: black !important;
+  background-color: #f1f2f6;
+  text-transform: uppercase;
+  font-family: "Agbalumo", Times, serif !important;
+}
+
+.split {
+  overflow-x: hidden;
+} 
+
+/* Control the left side */
+.left {
+  left: 0;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  color: black !important;
+  background: linear-gradient(-45deg, #ffffff, #a4b0be, #57606f, #ced6e0);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.leftText {
+  background-color: transparent !important;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.right {
+  background-color: #f1f2f6 !important;
+}
+
+.icon {
+  background-color: transparent;
+}
+
+.custom-navbar {
+  background-color: #f1f2f6 !important;
+}
+
+.logo-image {
+  width: 150px;
+  height: 150px;
+  background-color: #f1f2f6;
 }
 
 .mainPageCenterDiv {
@@ -25,6 +94,35 @@
   margin-left: auto;
   margin-right: auto;
   width: 250px;
+  padding: 2px;
+  margin-top: 5rem;
+}
+
+/* input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+} */
+
+.uname, .psw {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="text"]:not(:placeholder-shown) {
+  background-color: #f1f2f6; /* Change this to your desired text color when something is entered */
+}
+
+/* Text color when something is entered for password input */
+input[type="password"]:not(:placeholder-shown) {
+  background-color: #f1f2f6; /* Change this to your desired text color when something is entered */
 }
 
 .header {
@@ -137,7 +235,7 @@
 
 .addNewUserBtn {
   border: none;
-  background-color: white;
+  background-color: transparent;
 }
 
 .containerWide {
@@ -448,7 +546,7 @@ input {
 .kanbanButton {
   margin-left: 10px;
   border: transparent;
-  background-color: white;
+  background-color: transparent;
   color: black;
   padding: 0;
   text-align: left;

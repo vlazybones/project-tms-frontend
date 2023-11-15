@@ -4,6 +4,7 @@ import StateContext from "../StateContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Axios from "axios";
 import DispatchContext from "../DispatchContext";
+import logo from "../assets/tmslogo.png"
 
 // Link replace a href in jsx, Link To
 
@@ -113,11 +114,11 @@ function Header(props) {
   } else {
     return (
       <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <Link to="/" className="navbar-brand">
-            &nbsp;Task Management System
+        {/* <nav className="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+          <Link to="/" className="navbar-brand headerTitle">
+          <img src={logo} alt="Logo" className="logo-image" />
           </Link>
-        </nav>
+        </nav> */}
       </>
     );
   }

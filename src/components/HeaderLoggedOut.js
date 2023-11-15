@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import DispatchContext from "../DispatchContext";
+import { Icon } from '@iconify/react';
 
 function HeaderLoggedOut() {
   const appDispatch = useContext(DispatchContext);
@@ -31,7 +32,20 @@ function HeaderLoggedOut() {
   }
 
   return (
-    <div className="loginForm">
+    <div className="loggedOutPage">
+      <div className="split left">
+        <p className="leftText">
+        {/* <Icon icon="iconoir:kanban-board" style={{ background: 'transparent', verticalAlign: 'middle' }} /> */}
+        &nbsp;
+        TASK 
+        MANAGEMENT 
+        SYSTEM
+        </p>
+
+      </div>
+
+      <div className="split right">
+      <div className="loginForm">
       <form onSubmit={handleSubmit}>
         <div>
           <div>
@@ -39,7 +53,7 @@ function HeaderLoggedOut() {
               onChange={(e) => setUsername(e.target.value)}
               autoFocus
               name="username"
-              className="form-control form-control-sm input-dark"
+              className="form-control form-control-sm input-dark uname"
               type="text"
               placeholder="Username"
               autoComplete="off"
@@ -47,7 +61,7 @@ function HeaderLoggedOut() {
             <input
               onChange={(e) => setPassword(e.target.value)}
               name="password"
-              className="form-control form-control-sm input-dark"
+              className="form-control form-control-sm input-dark psw"
               type="password"
               placeholder="Password"
             />
@@ -58,6 +72,17 @@ function HeaderLoggedOut() {
         </div>
       </form>
     </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    
   );
 }
 
