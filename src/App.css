@@ -98,15 +98,6 @@ body {
   margin-top: 5rem;
 }
 
-/* input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-} */
-
 .uname, .psw {
   width: 100%;
   padding: 12px 20px;
@@ -114,15 +105,12 @@ body {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  background-color: #f1f2f6;
 }
 
-input[type="text"]:not(:placeholder-shown) {
-  background-color: #f1f2f6; /* Change this to your desired text color when something is entered */
-}
-
-/* Text color when something is entered for password input */
-input[type="password"]:not(:placeholder-shown) {
-  background-color: #f1f2f6; /* Change this to your desired text color when something is entered */
+.uname:focus,
+.psw:focus {
+    background-color: #f1f2f6; 
 }
 
 .header {
@@ -171,6 +159,21 @@ input[type="password"]:not(:placeholder-shown) {
 
 .overflowAdjust {
   overflow-wrap: anywhere;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  height: 480px;
+  background: #12c2e9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #a4b0be, #a4b0be, #ced6e0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #a4b0be, #a4b0be, #ced6e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .updateAllBtn {
@@ -280,6 +283,9 @@ input[type="password"]:not(:placeholder-shown) {
 
 table.editPtable tr td {
   border: 1px solid #000000;
+  background: #a4b0be;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f2f2f2, #f2f2f2, #f2f2f2, #f2f2f2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f2f2f2, #f2f2f2, #f2f2f2, #f2f2f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #groupsTD {
@@ -364,6 +370,7 @@ input {
   align-items: center;
   justify-content: center;
   margin-top: 2%;
+  background-color: transparent;
 }
 
 #scanfcode {

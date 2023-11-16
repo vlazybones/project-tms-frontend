@@ -55,12 +55,20 @@ function EditProfile() {
     multiValueRemove: (base, state) => {
       return state.data.isFixed ? { ...base, display: "none" } : base;
     },
-    control: (base) => ({
+    control: (base, state) => ({
       ...base,
       background: "transparent",
-      // Add any additional styles you need to customize the appearance of the control
+      border: "none", // Remove the border
+      boxShadow: "none", // Remove the box shadow
+      cursor: "pointer", // Set cursor style to pointer
+      minHeight: "unset", // Remove the minimum height
+    }),
+    indicatorsContainer: (base) => ({
+      ...base,
+      display: "none", // Remove the indicators container (e.g., dropdown arrow)
     }),
   };
+
 
   function convertGroupString(groupString) {
     if (Array.isArray(groupString)) {
@@ -255,7 +263,7 @@ function EditProfile() {
           <Container small={true}>
             <Page title="Edit Profile">
               <div className="table-responsive-lg">
-                <h1 className="alignMiddle"> Edit Profile </h1>
+                <h1 className="alignMiddle"> Profile </h1>
                 <form onSubmit={handleSubmit} id="editProfileFormTable">
                   <table className="editPtable">
                     <thead>
@@ -323,7 +331,7 @@ function EditProfile() {
               </div>
             </Page>
           </Container>
-        </>
+      </>
       );
     } else {
       return (
